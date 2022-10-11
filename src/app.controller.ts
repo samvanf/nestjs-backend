@@ -61,29 +61,14 @@ export class AppController {
   @ApiParam({
     name: 'bounds',
     required: false,
-    type: 'object',
-    content: {
-      'multipart/form-data': {
-        'schema': {
-          "type": "object",
-          "properties": {
-            "file": {
-              "type": "string",
-              "format": "binary",
-              "description": "Actual file attachment"
-            }
-          }
-        }
-      }
-    }
+    type: 'object'
   })
   // @ApiBody({
   //   schema: {},
   //   type: 'object'
   // })
   @ApiProperty({
-    description: 'Create a new game',
-    
+    description: 'Create a new game'
   })
   postGame() {
     
