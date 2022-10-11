@@ -9,7 +9,6 @@ async function bootstrap() {
     .setTitle('Game API')
     .setDescription('This will serve as a backend API for the React js frontend')
     .setVersion('1.0')
-    .addTag('game')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
