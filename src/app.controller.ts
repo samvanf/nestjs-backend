@@ -26,7 +26,12 @@ export class AppController {
     description: 'upper bound for goal'
   })
   getRandom(@Query() query: { min: number; max: number }) {
-    return Math.ceil((query.max - query.min + 1) * Math.random() - 1) + query.min;
+    // TODO Add a pipe or something like that which will prevent a min greater than the max.
+
+    const maxNumber = parseInt(`${query.max}`);
+    const minNumber = parseInt(`${query.min}`);
+    
+    return Math.ceil(((maxNumber - minNumber + 1) * Math.random()) + minNumber - 1);
   }
 
   @Get('bounds')
