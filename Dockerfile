@@ -1,6 +1,7 @@
 FROM node:16.13 as build
 
 WORKDIR /app
+EXPOSE 80
 COPY package*.json .
 RUN npm install
 COPY . .
